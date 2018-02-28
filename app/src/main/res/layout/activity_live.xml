@@ -9,6 +9,15 @@
 
     <include layout="@layout/top_actionbar"/>
 
+    <TextView
+        android:id="@+id/hdp_tips"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:textColor="@color/grey_medium"
+        android:text="@string/hdp_tips"
+        android:layout_margin="@dimen/dimen_20dp"
+        />
     <android.support.v7.widget.RecyclerView
         android:id="@+id/ry_live"
         android:layout_width="match_parent"

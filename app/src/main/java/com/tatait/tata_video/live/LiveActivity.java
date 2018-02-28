@@ -2,10 +2,13 @@ package com.tatait.tata_video.live;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.os.Looper;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
 
 import com.tatait.tata_video.R;
 import com.tatait.tata_video.base.BaseActivity;
@@ -13,6 +16,8 @@ import com.tatait.tata_video.base.BaseActivity;
 public class LiveActivity extends BaseActivity {
 
     private RecyclerView mRecyclerView;
+    private TextView mHdpTips;
+    private static final int TIPS_DURATION = 3000;
 
     @Override
     protected int getLayoutId() {
@@ -36,6 +41,7 @@ public class LiveActivity extends BaseActivity {
         setTitle(getResources().getString(R.string.live_title));
 
         mRecyclerView = bindViewId(R.id.ry_live);
+        mHdpTips = bindViewId(R.id.hdp_tips);
         //1 表示一列
         GridLayoutManager manager = new GridLayoutManager(this, 1);
         //垂直布局排列
@@ -50,7 +56,12 @@ public class LiveActivity extends BaseActivity {
 
     @Override
     protected void initData() {
-
+        new android.os.Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                mHdpTips.setVisibility(View.GONE);
+            }
+        }, TIPS_DURATION);
     }
 
     public static void launch(Activity activity) {

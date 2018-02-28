@@ -45,6 +45,7 @@ public class AlbumDetailActivity extends BaseActivity {
     private int mCurrentVideoPosition;
     private CommonDBHelper mFavoriteDBHelper;
     private CommonDBHelper mHistoryDBHelper;
+    private TextView mTestBtn;
 
     @Override
     protected int getLayoutId() {
@@ -70,6 +71,7 @@ public class AlbumDetailActivity extends BaseActivity {
         mDirector = bindViewId(R.id.tv_album_director);
         mMainActor = bindViewId(R.id.tv_album_mainactor);
         mAlbumDesc = bindViewId(R.id.tv_album_desc);
+        mTestBtn = bindViewId(R.id.test_yuan);
         mSuperBitstreamButton = bindViewId(R.id.bt_super);
         mSuperBitstreamButton.setOnClickListener(mOnSuperClickListener);
         mNormalBitstreamButton = bindViewId(R.id.bt_normal);
@@ -183,6 +185,11 @@ public class AlbumDetailActivity extends BaseActivity {
 
             }
         });
+        if(mAlbum != null && "小楼又东风".equals(mAlbum.getTitle())){
+            mTestBtn.setVisibility(View.VISIBLE);
+        }else {
+            mTestBtn.setVisibility(View.GONE);
+        }
     }
 
     @Override
@@ -277,6 +284,9 @@ public class AlbumDetailActivity extends BaseActivity {
                 public void run() {
                     mSuperBitstreamButton.setVisibility(View.VISIBLE);
                     mSuperBitstreamButton.setTag(R.id.key_video_url, url); //视频url
+                    if(mTestBtn!=null &&mTestBtn.getVisibility() == View.VISIBLE){
+                        mSuperBitstreamButton.setTag(R.id.key_video_url, "http://pl-ali.youku.com/playlist/m3u8?vid=XMzI4OTkzNTg0MA%3D%3D&type=mp4&ups_client_netip=751c8946&utid=eQnfEqEAJSQCAXgnf6zWSO%2FC&ccode=0501&psid=99bf5bdd9525f34b1569917f64c70192&ups_userid=717536199&ups_ytid=717536199&duration=2657&expire=18000&ups_ts=1519805590&onOff=0&encr=0&ups_key=fc486342965785f2ce77788ad3db4b7b"); //视频url
+                    }
                     mSuperBitstreamButton.setTag(R.id.key_video, video);//视频info
                     mSuperBitstreamButton.setTag(R.id.key_current_video_number, mCurrentVideoPosition);//当前视频
                     mSuperBitstreamButton.setTag(R.id.key_video_stream, StreamType.SUPER); //码流

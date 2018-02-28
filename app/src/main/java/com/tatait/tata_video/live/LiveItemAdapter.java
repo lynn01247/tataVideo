@@ -21,40 +21,23 @@ public class LiveItemAdapter extends RecyclerView.Adapter<LiveItemAdapter.ViewHo
     private Context mContext;
     // 数据集
     private String[] mDataList = new String[] {
-            "CCTV-1 综合","CCTV-2 财经","CCTV-3 综艺","CCTV-4 中文国际(亚)","CCTV-5 体育",
-            "CCTV-6 电影","CCTV-7 军事农业","CCTV-8 电视剧", "CCTV-9 纪录","CCTV-10 科教",
-            "CCTV-11 戏曲","CCTV-12 社会与法","CCTV-13 新闻","CCTV-14 少儿","CCTV-15 音乐",
-            "湖南卫视","北京卫视","天津卫视","湖北卫视","东方卫视",
+            "公视1","公视2","公视3","TVBS新闻","动物星球",
+            "星空卫视","体育1台",
     };
 
     private int[] mIconList = new int[] {
-            R.drawable.cctv_1, R.drawable.cctv_2, R.drawable.cctv_3, R.drawable.cctv_4, R.drawable.cctv_5,
-            R.drawable.cctv_6, R.drawable.cctv_7, R.drawable.cctv_8, R.drawable.cctv_9, R.drawable.cctv_10,
-            R.drawable.cctv_11, R.drawable.cctv_12, R.drawable.cctv_13, R.drawable.cctv_14, R.drawable.cctv_15,
-            R.drawable.hunan_tv,R.drawable.beijing_tv,R.drawable.tianjing_tv,R.drawable.hubei_tv,R.drawable.dongfang_tv,
+            R.drawable.ic_live, R.drawable.ic_live, R.drawable.ic_live, R.drawable.ic_live, R.drawable.ic_live,
+            R.drawable.ic_live, R.drawable.ic_live,
     };
 
     private String [] mUrlList = new String[]{
-            "https://pl-ali.youku.com/playlist/m3u8?vid=XMzQxNzk5MDUwNA%3D%3D&type=mp4&ups_client_netip=1b9a4aff&utid=eQnfEqEAJSQCAXgnf6zWSO%2FC&ccode=0501&psid=f008ffb2e01e24b791477e2e3dc2707c&ups_userid=717536199&ups_ytid=717536199&duration=2757&expire=18000&ups_ts=1519735046&onOff=0&encr=0&ups_key=cc1c42928a32f911cce0bf690b58b9eb",
-            "http://220.248.175.231:6610/001/2/ch00000090990000001014/index.m3u8?virtualDomain=001.live_hls.zte.com",
-            "http://220.248.175.230:6610/001/2/ch00000090990000001023/index.m3u8?virtualDomain=001.live_hls.zte.com",
-            "http://220.248.175.231:6610/001/2/ch00000090990000001015/index.m3u8?virtualDomain=001.live_hls.zte.com",
-            "http://220.248.175.231:6610/001/2/ch00000090990000001016/index.m3u8?virtualDomain=001.live_hls.zte.com",
-            "http://220.248.175.231:6610/001/2/ch00000090990000001017/index.m3u8?virtualDomain=001.live_hls.zte.com",
-            "http://220.248.175.231:6610/001/2/ch00000090990000001018/index.m3u8?virtualDomain=001.live_hls.zte.com",
-            "http://220.248.175.231:6610/001/2/ch00000090990000001019/index.m3u8?virtualDomain=001.live_hls.zte.com",
-            "http://220.248.175.231:6610/001/2/ch00000090990000001020/index.m3u8?virtualDomain=001.live_hls.zte.com",
-            "http://220.248.175.231:6610/001/2/ch00000090990000001021/index.m3u8?virtualDomain=001.live_hls.zte.com",
-            "http://220.248.175.230:6610/001/2/ch00000090990000001027/index.m3u8?virtualDomain=001.live_hls.zte.com",
-            "http://220.248.175.230:6610/001/2/ch00000090990000001028/index.m3u8?virtualDomain=001.live_hls.zte.com",
-            "http://220.248.175.230:6610/001/2/ch00000090990000001029/index.m3u8?virtualDomain=001.live_hls.zte.com",
-            "http://220.248.175.230:6610/001/2/ch00000090990000001030/index.m3u8?virtualDomain=001.live_hls.zte.com",
-            "http://220.248.175.230:6610/001/2/ch00000090990000001031/index.m3u8?virtualDomain=001.live_hls.zte.com",
-            "http://220.248.175.230:6610/001/2/ch00000090990000001053/index.m3u8?virtualDomain=001.live_hls.zte.com",
-            "http://220.248.175.231:6610/001/2/ch00000090990000001077/index.m3u8?virtualDomain=001.live_hls.zte.com",
-            "http://220.248.175.230:6610/001/2/ch00000090990000001069/index.m3u8?virtualDomain=001.live_hls.zte.com",
-            "http://220.248.175.230:6610/001/2/ch00000090990000001047/index.m3u8?virtualDomain=001.live_hls.zte.com",
-            "http://220.248.175.231:6610/001/2/ch00000090990000001081/index.m3u8?virtualDomain=001.live_hls.zte.com",
+            "http://115.159.45.139:8888/52itv.net/ltv/index.m3u8?c=6",
+            "http://115.159.45.139:8888/52itv.net/ltv/index.m3u8?c=7",
+            "http://115.159.45.139:8888/52itv.net/ltv/index.m3u8?c=8",
+            "http://115.159.45.139:8888/52itv.net/ltv/index.m3u8?c=25",
+            "http://115.159.45.139:8888/52itv.net/ltv/index.m3u8?c=35",
+            "http://115.159.45.139:8888/52itv.net/ltv/index.m3u8?c=73",
+            "http://115.159.45.139:8888/52itv.net/ltv/index.m3u8?c=78",
     };
 
     public LiveItemAdapter(Context context) {

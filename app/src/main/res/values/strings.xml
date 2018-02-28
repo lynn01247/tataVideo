@@ -45,7 +45,7 @@
     <string name="share_app">Hello,Tata Video.  全能解码，想看啥就看啥。----这是Tata视频的魅力。%s：http://fir.im/tatavideo</string>
 
     <string name="data_failed_tip">数据加载失败,请检查网络!</string>
-    <string name="load_more_text">拼命加载新数据...</string>
+    <string name="load_more_text">加载新数据...</string>
     <string name="no_date_text">暂时没有数据...</string>
 
     <string name="director">导演：</string>
@@ -67,6 +67,8 @@
     <string name="favorite_dialog_quit">取消</string>
     <string name="history_title">播放历史</string>
     <string name="history_empty">暂无播放历史!</string>
+    <string name="test_url">测试生效\n超清已被替换</string>
+    <string name="hdp_tips">由于直播源可能出现失效，如果无法播放，请联系作者进行更新!</string>
 
     <string name="VideoView_error_text_invalid_progressive_playback">Invalid progressive playback</string>
     <string name="VideoView_error_text_unknown">Unknown</string>

@@ -8,8 +8,8 @@
 
     <ImageView
         android:id="@+id/iv_live_icon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_width="@dimen/dimen_80dp"
+        android:layout_height="@dimen/dimen_80dp"/>
 
     <TextView
         android:id="@+id/tv_live_title"

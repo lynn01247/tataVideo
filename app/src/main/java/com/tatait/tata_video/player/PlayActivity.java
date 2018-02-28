@@ -291,7 +291,7 @@ public class PlayActivity extends BaseActivity implements GestureDetectorControl
         IjkMediaPlayer.native_profileBegin("libijkplayer.so");
         mLoadingLayout = bindViewId(R.id.rl_loading_layout);
         mLoadingText = bindViewId(R.id.tv_loading_info);
-        mLoadingText.setText("拼命缓冲中...");
+        mLoadingText.setText("正在缓冲中...");
         mVideoView.setVideoURI(Uri.parse(mUrl));
         mVideoView.setOnPreparedListener(new IMediaPlayer.OnPreparedListener() {
             @Override

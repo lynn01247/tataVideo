@@ -5,7 +5,7 @@ android {
     compileSdkVersion 23
     buildToolsVersion "23.0.3"
     defaultConfig {
-        applicationId "com.tatait.tata_ideo"
+        applicationId "com.tatait.tata_video"
         minSdkVersion 15
         targetSdkVersion 23
         versionCode 2

@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_album_detail"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <include layout="@layout/top_actionbar"/>
-    
+    <include layout="@layout/top_actionbar" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:orientation="horizontal"
         android:background="@drawable/bg_boder"
+        android:orientation="horizontal"
         android:padding="@dimen/dimen_8dp"
         android:weightSum="7">
 
@@ -21,15 +20,15 @@
             android:id="@+id/iv_album_image"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="2"
             android:layout_margin="@dimen/dimen_8dp"
-            android:scaleType="centerCrop"/>
+            android:layout_weight="2"
+            android:scaleType="centerCrop" />
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="5"
             android:layout_gravity="center_vertical"
+            android:layout_weight="5"
             android:orientation="vertical">
 
             <TextView
@@ -37,33 +36,31 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/dimen_8dp"
-                android:lines="1"
                 android:ellipsize="end"
-                android:textSize="@dimen/dimen_36sp"/>
+                android:lines="1"
+                android:textSize="@dimen/dimen_36sp" />
 
             <TextView
                 android:id="@+id/tv_album_director"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/dimen_8dp"
+                android:ellipsize="end"
                 android:lines="1"
                 android:textSize="@dimen/dimen_28sp"
-                android:ellipsize="end"
-                android:visibility="gone"/>
+                android:visibility="gone" />
 
             <TextView
                 android:id="@+id/tv_album_mainactor"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/dimen_8dp"
+                android:ellipsize="end"
                 android:lines="1"
                 android:textSize="@dimen/dimen_28sp"
-                android:ellipsize="end"
-                android:visibility="gone"/>
+                android:visibility="gone" />
 
         </LinearLayout>
-
-
 
 
     </LinearLayout>
@@ -76,8 +73,8 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="@dimen/dimen_2dp"
-            android:background="@color/grey_medium_light"
-            android:layout_gravity="bottom"/>
+            android:layout_gravity="bottom"
+            android:background="@color/grey_medium_light" />
 
         <!-- 描述相关-->
         <RelativeLayout
@@ -99,10 +96,10 @@
                         android:id="@+id/tv_album_desc"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:paddingRight="@dimen/dimen_10dp"
                         android:paddingBottom="@dimen/dimen_10dp"
                         android:paddingLeft="@dimen/dimen_10dp"
-                        android:paddingTop="@dimen/dimen_50dp"/>
+                        android:paddingRight="@dimen/dimen_10dp"
+                        android:paddingTop="@dimen/dimen_50dp" />
 
 
                 </ScrollView>
@@ -115,7 +112,7 @@
             android:id="@+id/fragment_container"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:padding="@dimen/dimen_8dp"/>
+            android:padding="@dimen/dimen_8dp" />
 
 
     </FrameLayout>
@@ -128,11 +125,6 @@
         android:orientation="horizontal"
         android:paddingBottom="@dimen/dimen_8dp">
 
-        <include layout="@layout/detail_bottom_button"/>
-
+        <include layout="@layout/detail_bottom_button" />
     </LinearLayout>
-
-
-    
-    
 </LinearLayout>
