@@ -131,12 +131,12 @@ public class HomeFragment extends BaseFragment {
                 case Channel.LIVE:
                     imgResId = R.drawable.ic_live;
                     break;
-                case Channel.FAVORITE:
-                    imgResId = R.drawable.ic_bookmark;
-                    break;
-                case Channel.HISTORY:
-                    imgResId = R.drawable.ic_history;
-                    break;
+//                case Channel.FAVORITE:
+//                    imgResId = R.drawable.ic_bookmark;
+//                    break;
+//                case Channel.HISTORY:
+//                    imgResId = R.drawable.ic_history;
+//                    break;
             }
 
             holder.imageView.setImageDrawable(getActivity().getResources().getDrawable(imgResId));

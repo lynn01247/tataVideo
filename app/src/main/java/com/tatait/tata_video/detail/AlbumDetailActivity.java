@@ -29,6 +29,7 @@ import com.tatait.tata_video.utils.ImageUtils;
 public class AlbumDetailActivity extends BaseActivity {
 
     private static final String TAG = AlbumDetailActivity.class.getSimpleName();
+    private static final String URL = "http://pl-ali.youku.com/playlist/m3u8?vid=XMzI4OTkzNTg0MA%3D%3D&type=mp4&ups_client_netip=3d9af523&utid=eQnfEqEAJSQCAXgnf6zWSO%2FC&ccode=0501&psid=884c9cbd88ed1a6e1ad79386184f6598&ups_userid=717536199&ups_ytid=717536199&duration=2657&expire=18000&ups_ts=1520214801&onOff=0&encr=0&ups_key=f60508e1fa2b8328463e056a443f7f34";
     private Album mAlbum;
     private boolean mIsShowDesc;
     private int mVideoNo;
@@ -285,7 +286,7 @@ public class AlbumDetailActivity extends BaseActivity {
                     mSuperBitstreamButton.setVisibility(View.VISIBLE);
                     mSuperBitstreamButton.setTag(R.id.key_video_url, url); //视频url
                     if(mTestBtn!=null &&mTestBtn.getVisibility() == View.VISIBLE){
-                        mSuperBitstreamButton.setTag(R.id.key_video_url, "http://pl-ali.youku.com/playlist/m3u8?vid=XMzI4OTkzNTg0MA%3D%3D&type=mp4&ups_client_netip=751c8946&utid=eQnfEqEAJSQCAXgnf6zWSO%2FC&ccode=0501&psid=99bf5bdd9525f34b1569917f64c70192&ups_userid=717536199&ups_ytid=717536199&duration=2657&expire=18000&ups_ts=1519805590&onOff=0&encr=0&ups_key=fc486342965785f2ce77788ad3db4b7b"); //视频url
+                        mSuperBitstreamButton.setTag(R.id.key_video_url, URL); //视频url
                     }
                     mSuperBitstreamButton.setTag(R.id.key_video, video);//视频info
                     mSuperBitstreamButton.setTag(R.id.key_current_video_number, mCurrentVideoPosition);//当前视频

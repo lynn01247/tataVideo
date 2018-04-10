@@ -12,6 +12,9 @@ import android.view.MenuItem;
 import com.tatait.tata_video.FragmentManagerWrapper;
 import com.tatait.tata_video.GuideActivity;
 import com.tatait.tata_video.base.BaseActivity;
+import com.tatait.tata_video.blog.BlogActivity;
+import com.tatait.tata_video.favorite.FavoriteActivity;
+import com.tatait.tata_video.history.HistoryActivity;
 
 public class HomeActivity extends BaseActivity {
 
@@ -69,20 +72,29 @@ public class HomeActivity extends BaseActivity {
                         item.setChecked(true);
                         break;
                     case com.tatait.tata_video.R.id.navigation_item_blog:
-                        if (mPreItem != null) {
-                            mPreItem.setCheckable(false);
-                        }
-                        switchFragment(BlogFragment.class);
-                        mToolBar.setTitle(com.tatait.tata_video.R.string.blog_title);
-                        mPreItem = item;
+//                        if (mPreItem != null) {
+//                            mPreItem.setCheckable(false);
+//                        }
+//                        switchFragment(BlogFragment.class);
+//                        mToolBar.setTitle(com.tatait.tata_video.R.string.blog_title);
+//                        mPreItem = item;
+//                        mDrawerLayout.closeDrawer(Gravity.START);
+//                        item.setChecked(true);
+                        startActivity(new Intent(HomeActivity.this, BlogActivity.class));
                         mDrawerLayout.closeDrawer(Gravity.START);
-                        item.setChecked(true);
                         break;
                     case com.tatait.tata_video.R.id.navigation_item_about:
 //                        switchFragment(AboutFragment.class);
 //                        mToolBar.setTitle(com.tatait.tata_video.R.string.about_title);
-                        Intent intent = new Intent(HomeActivity.this, AboutActivity.class);
-                        startActivity(intent);
+                        startActivity(new Intent(HomeActivity.this, AboutActivity.class));
+                        mDrawerLayout.closeDrawer(Gravity.START);
+                        break;
+                    case com.tatait.tata_video.R.id.navigation_item_history:
+                        HistoryActivity.launch(HomeActivity.this);
+                        mDrawerLayout.closeDrawer(Gravity.START);
+                        break;
+                    case com.tatait.tata_video.R.id.navigation_item_collect:
+                        FavoriteActivity.launch(HomeActivity.this);
                         mDrawerLayout.closeDrawer(Gravity.START);
                         break;
                 }

@@ -40,6 +40,7 @@
     <string name="about_api">相关API</string>
     <string name="letv_api">乐视视频接口</string>
     <string name="video_api">视频API</string>
+    <string name="sohu_api">搜狐视频接口</string>
 
     <string name="share">分享</string>
     <string name="share_app">Hello,Tata Video.  全能解码，想看啥就看啥。----这是Tata视频的魅力。%s：http://fir.im/tatavideo</string>
@@ -66,6 +67,7 @@
     <string name="favorite_dialog_sure">确定</string>
     <string name="favorite_dialog_quit">取消</string>
     <string name="history_title">播放历史</string>
+    <string name="sort_type">功能 - 大类</string>
     <string name="history_empty">暂无播放历史!</string>
     <string name="test_url">测试生效\n超清已被替换</string>
     <string name="hdp_tips">由于直播源可能出现失效，如果无法播放，请联系作者进行更新!</string>

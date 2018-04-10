@@ -10,9 +10,17 @@
             android:icon="@drawable/iconfont_home"
             android:title="视频" />
         <item
+            android:id="@+id/navigation_item_history"
+            android:icon="@drawable/ic_history"
+            android:title="播放历史" />
+        <item
+            android:id="@+id/navigation_item_collect"
+            android:icon="@drawable/ic_bookmark"
+            android:title="我的收藏" />
+        <item
             android:id="@+id/navigation_item_blog"
             android:icon="@drawable/iconfont_blog"
-            android:title="我的博客" />
+            android:title="作者博客" />
         <item
             android:id="@+id/navigation_item_about"
             android:icon="@drawable/iconfont_about"

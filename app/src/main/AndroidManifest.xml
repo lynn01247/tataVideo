@@ -40,6 +40,7 @@
         <activity android:name="com.tatait.tata_video.live.LiveActivity" />
         <activity android:name="com.tatait.tata_video.favorite.FavoriteActivity" />
         <activity android:name="com.tatait.tata_video.history.HistoryActivity" />
+        <activity android:name="com.tatait.tata_video.blog.BlogActivity" />
 
     </application>
 

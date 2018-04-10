@@ -16,5 +16,8 @@
         <Preference
             android:summary="@string/letv_api"
             android:title="@string/video_api" />
+        <Preference
+            android:summary="@string/letv_api"
+            android:title="@string/video_api" />
     </PreferenceCategory>
 </PreferenceScreen>
